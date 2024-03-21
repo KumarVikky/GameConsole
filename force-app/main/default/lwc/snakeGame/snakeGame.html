@@ -1,0 +1,19 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="body">
+        <div class= "scoreBox">{scoreBox}</div>
+        <div class ="hiscoreBox">{hiscoreBox}</div>
+        <div lwc:dom="manual" class="board"></div>
+        <div>
+            <template if:true={showPlayButton}>
+                <button class="playButton" onclick={playGame}>Play Game</button>
+            </template>
+            <template if:true={showPlayAgainButton}>
+                <button class="playAgainButton" onclick={playGame}>Gave Over! Play Again</button>
+            </template>
+            <template if:true={showPauseButton}>
+                <button class="pauseButton"  onclick={pauseGame}>Pause Game</button>
+            </template>
+        </div>
+    </div>
+</template>
